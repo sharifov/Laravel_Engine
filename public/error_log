@@ -1,0 +1,603 @@
+[09-Jan-2020 11:22:51 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:22:51 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:22:53 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:22:53 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:22:56 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:22:56 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:22:58 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:22:58 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:01 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:01 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:03 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:03 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:03 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:03 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:08 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:08 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:13 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:13 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:18 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:18 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:23 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:23 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:28 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:28 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:33 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:33 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:36 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:36 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:38 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:38 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:43 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:43 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:48 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:48 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:53 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:53 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:54 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:54 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:58 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:23:58 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:03 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:03 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:08 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:08 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:13 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:13 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:18 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:18 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:22 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:22 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:23 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:23 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:28 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:28 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:32 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:32 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:33 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:33 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:38 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:38 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:43 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:43 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:43 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:43 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:48 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:48 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:53 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:53 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:58 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:24:58 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:03 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:03 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:08 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:08 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:13 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:13 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:18 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:18 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:23 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:23 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:28 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:28 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:33 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:33 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:38 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:38 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:43 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:43 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:48 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:48 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:53 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:53 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:58 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:25:58 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:03 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:03 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:08 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:08 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:13 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:13 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:18 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:18 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:23 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:23 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:28 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:28 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:33 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:33 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:38 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:38 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:43 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(387): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:26:43 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:08 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(391): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:08 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:09 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(391): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:09 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:13 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(391): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:13 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:14 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(391): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:14 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:18 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(391): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:18 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:19 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(391): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:19 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:23 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(389): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:23 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:24 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(389): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:24 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:27 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(389): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:27 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:28 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(389): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:28 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:33 UTC] PHP Warning:  Uncaught ErrorException: Array to string conversion in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php:393
+Stack trace:
+#0 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/hostimul/coder...', 393, Array)
+#1 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(393): require()
+#2 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php(349): Illuminate\Routing\Router->loadRoutes(Array)
+#3 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(105): Illuminate\Routing\Router->group(Array, Array)
+#4 /hostimul/coder/networking.coder.az/routes/web.php(389): Illuminate\Routing\RouteRegistrar->group(Array, Object(Closure))
+#5 /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routin in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393
+[09-Jan-2020 11:29:33 UTC] PHP Fatal error:  Illuminate\Routing\Router::loadRoutes(): Failed opening required 'Array' (include_path='.:/opt/alt/php71/usr/share/pear') in /hostimul/coder/networking.coder.az/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 393

@@ -1,0 +1,1029 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Хост: localhost:3306
+-- Время создания: Янв 15 2020 г., 06:11
+-- Версия сервера: 10.2.30-MariaDB-cll-lve
+-- Версия PHP: 7.3.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `coder_networking`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Administrator',
+  `photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 1,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `admins`
+--
+
+INSERT INTO `admins` (`id`, `name`, `email`, `phone`, `role`, `photo`, `password`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'admin@gmail.com', '01629552892', 'Administrator', '1556780563user.png', '$2y$10$hHq25ljvhcHLrH7A8mmHI.4nxnRsCwz7/yeeqbWu1famBzr1SLhqu', 1, 'uOCPqJDzTacpjdsc3vl11sCY8rKMXtwI8EmLuO5gVmsjltNdkj0yI7oPx2Fv', '2018-02-28 23:27:08', '2019-06-30 17:39:23'),
+(4, 'Staff', 'staff@gmail.com', '34534534534', 'Staff', '1558707029staff.jpg', '$2y$10$I/2L8FXvxOQV7irwh2PH2upufB0DBMponc99HDo8U4cWx2B/6ASwa', 1, 'IyWPS6QSMnHLw5p9QaOz93BVsW5vyJh6FyTzi3AoYzdHwsAhYoazDzWSCuqZ', '2019-05-24 08:10:30', '2019-05-24 08:10:30');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `category_id` int(191) NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `source` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `views` int(11) NOT NULL DEFAULT 0,
+  `status` tinyint(4) NOT NULL DEFAULT 1,
+  `meta_tag` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tags` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `category_id`, `title`, `details`, `photo`, `source`, `views`, `status`, `meta_tag`, `meta_description`, `tags`, `created_at`) VALUES
+(20, 2, 'Networking 09.03.2017', '<div align=\"justify\"><br></div>', '157900730017211868_483207815402270_719153447270212252_o.jpg', 'www.geniusocean.com', 20, 1, NULL, NULL, NULL, '2018-08-03 06:03:14');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blog_categories`
+--
+
+CREATE TABLE `blog_categories` (
+  `id` int(191) NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `blog_categories`
+--
+
+INSERT INTO `blog_categories` (`id`, `name`, `slug`) VALUES
+(2, 'Oil & gas', 'oil-and-gas'),
+(3, 'Manufacturing', 'manufacturing'),
+(4, 'Chemical Research', 'chemical_research'),
+(5, 'Agriculture', 'agriculture'),
+(6, 'Mechanical', 'mechanical'),
+(7, 'Entrepreneurs', 'entrepreneurs'),
+(8, 'Technology', 'technology');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `currencies`
+--
+
+CREATE TABLE `currencies` (
+  `id` int(191) NOT NULL,
+  `name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sign` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` double NOT NULL,
+  `is_default` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `currencies`
+--
+
+INSERT INTO `currencies` (`id`, `name`, `sign`, `value`, `is_default`) VALUES
+(1, 'USD', '$', 1, 1),
+(4, 'BDT', '৳', 82.92649841308594, 0),
+(6, 'EUR', '€', 0.864870011806488, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `email_templates`
+--
+
+CREATE TABLE `email_templates` (
+  `id` int(11) NOT NULL,
+  `email_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email_subject` mediumtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email_body` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `email_templates`
+--
+
+INSERT INTO `email_templates` (`id`, `email_type`, `email_subject`, `email_body`, `status`) VALUES
+(1, 'new_order', 'Your Order Placed Successfully', '<p>Hello {customer_name},<br>Your order has been placed successfully</p>', 1),
+(2, 'new_registration', 'Welcome To KingCommerce', '<p>Hello {customer_name},<br>You have successfully registered to {website_title}, We wish you will have a wonderful experience using our service.</p><p>Thank You<br></p>', 1),
+(3, 'vendor_accept', 'Your Vendor Account Activated', '<p>Hello {customer_name},<br>Your Vendor Account Activated Successfully. Please Login to your account and build your own shop.</p><p>Thank You<br></p>', 1),
+(4, 'subscription_warning', 'Your subscrption plan will end after five days', '<p>Hello {customer_name},<br>Your subscription plan duration will end after five days. Please renew your plan otherwise all of your products will be deactivated.</p><p>Thank You<br></p>', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `faqs`
+--
+
+CREATE TABLE `faqs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint(1) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `faqs`
+--
+
+INSERT INTO `faqs` (`id`, `title`, `details`, `status`) VALUES
+(1, 'Right my front it wound cause fully', '<span style=\"color: rgb(70, 85, 65); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px;\">Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.</span><br>', 1),
+(3, 'Man particular insensible celebrated', '<span style=\"color: rgb(70, 85, 65); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px;\">Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.</span><br>', 1),
+(4, 'Civilly why how end viewing related', '<span style=\"color: rgb(70, 85, 65); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px;\">Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.</span><br>', 0),
+(5, 'Six started far placing saw respect', '<span style=\"color: rgb(70, 85, 65); font-family: \" open=\"\" sans\",=\"\" sans-serif;=\"\" font-size:=\"\" 16px;\"=\"\">Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.</span><br>', 0),
+(6, 'She jointure goodness interest debat', '<div style=\"text-align: center;\"><div style=\"text-align: center;\"><img src=\"https://i.imgur.com/MGucWKc.jpg\" width=\"350\"></div></div><div style=\"text-align: center;\"><br></div><div style=\"text-align: center;\"><span style=\"color: rgb(70, 85, 65); font-family: \" open=\"\" sans\",=\"\" sans-serif;=\"\" font-size:=\"\" 16px;\"=\"\">Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.<br></span></div>', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `features`
+--
+
+CREATE TABLE `features` (
+  `id` int(191) NOT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `features`
+--
+
+INSERT INTO `features` (`id`, `title`, `details`, `photo`) VALUES
+(9, '10 +', '<p>Tədbir</p>', '157900957313_podium_audio_mike_speaker_table_presentation-512.png'),
+(10, '100 +', '<p>Klub üzvü</p>', '15790095639_Partnership_collaboration_joint_venture_deal_agreement-512 (1).png'),
+(11, '700 +', '<p>İştirakçı</p>', '15790095099_team_office_employee_business_worker-512.png');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `generalsettings`
+--
+
+CREATE TABLE `generalsettings` (
+  `id` int(191) NOT NULL,
+  `logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `favicon` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `loader` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `admin_loader` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `header_email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `header_phone` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `footer` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `copyright` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `colors` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_talkto` tinyint(1) NOT NULL DEFAULT 1,
+  `talkto` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_language` tinyint(1) NOT NULL DEFAULT 1,
+  `is_loader` tinyint(1) NOT NULL DEFAULT 1,
+  `map_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_disqus` tinyint(1) NOT NULL DEFAULT 0,
+  `disqus` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_contact` tinyint(1) NOT NULL DEFAULT 0,
+  `is_faq` tinyint(1) NOT NULL DEFAULT 0,
+  `paypal_check` tinyint(1) DEFAULT 0,
+  `stripe_check` tinyint(1) NOT NULL DEFAULT 0,
+  `cod_check` tinyint(1) NOT NULL DEFAULT 0,
+  `paypal_business` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stripe_key` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stripe_secret` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `smtp_host` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `smtp_port` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `smtp_user` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `smtp_pass` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `from_email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `from_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_smtp` tinyint(1) NOT NULL DEFAULT 0,
+  `coupon_found` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `already_coupon` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_currency` tinyint(1) NOT NULL DEFAULT 0,
+  `currency_format` tinyint(1) NOT NULL DEFAULT 0,
+  `price_title` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price_subtitle` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price_text` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subscribe_success` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subscribe_error` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `error_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `error_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `error_photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `breadcumb_banner` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `generalsettings`
+--
+
+INSERT INTO `generalsettings` (`id`, `logo`, `favicon`, `loader`, `admin_loader`, `banner`, `title`, `header_email`, `header_phone`, `footer`, `copyright`, `colors`, `is_talkto`, `talkto`, `is_language`, `is_loader`, `map_key`, `is_disqus`, `disqus`, `is_contact`, `is_faq`, `paypal_check`, `stripe_check`, `cod_check`, `paypal_business`, `stripe_key`, `stripe_secret`, `smtp_host`, `smtp_port`, `smtp_user`, `smtp_pass`, `from_email`, `from_name`, `is_smtp`, `coupon_found`, `already_coupon`, `order_title`, `service_subtitle`, `service_title`, `service_text`, `service_image`, `order_text`, `is_currency`, `currency_format`, `price_title`, `price_subtitle`, `price_text`, `subscribe_success`, `subscribe_error`, `error_title`, `error_text`, `error_photo`, `breadcumb_banner`) VALUES
+(1, '1577444440networkin.az logo-01.svg', '1578914581networkingfavicon.png', '1578985308Spinner-1s-200px.gif', '1578985308Spinner-1s-200px.gif', '1578573017dennnn.png', 'Corporate Business', 'Info@example.com', '0123 456789', 'Webcoder Agency', 'COPYRIGHT © 2020. Bütün hüquqlar qorunur.<a href=\"http://geniusocean.com/\">W</a>ebcoder Agency', '#4a1ec7', 0, '<script type=\"text/javascript\">\r\nvar Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();\r\n(function(){\r\nvar s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];\r\ns1.async=true;\r\ns1.src=\'https://embed.tawk.to/5bc2019c61d0b77092512d03/default\';\r\ns1.charset=\'UTF-8\';\r\ns1.setAttribute(\'crossorigin\',\'*\');\r\ns0.parentNode.insertBefore(s1,s0);\r\n})();\r\n</script>', 1, 1, 'AIzaSyB1GpE4qeoJ__70UZxvX9CTMUTZRZNHcu8', 1, '<div id=\"disqus_thread\">         \r\n    <script>\r\n    /**\r\n    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.\r\n    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/\r\n    /*\r\n    var disqus_config = function () {\r\n    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page\'s canonical URL variable\r\n    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page\'s unique identifier variable\r\n    };\r\n    */\r\n    (function() { // DON\'T EDIT BELOW THIS LINE\r\n    var d = document, s = d.createElement(\'script\');\r\n    s.src = \'https://junnun.disqus.com/embed.js\';\r\n    s.setAttribute(\'data-timestamp\', +new Date());\r\n    (d.head || d.body).appendChild(s);\r\n    })();\r\n    </script>\r\n    <noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>\r\n    </div>', 1, 1, 1, 1, 1, 'shaon143-facilitator-1@gmail.com', 'pk_test_UnU1Coi1p5qFGwtpjZMRMgJM', 'sk_test_QQcg3vGsKRPlW6T3dXcNJsor', 'in-v3.mailjet.com', '587', '0e05029e2dc70da691aa2223aa53c5be', '5df1b6242e86bce602c3fd9adc178460', 'admin@geniusocean.com', 'GeniusOcean', 1, 'Coupon Found', 'Coupon Already Applied', 'THANK YOU FOR YOUR PURCHASE.', '<h5 class=\"sub-title\" style=\"margin-bottom: 2px; font-weight: 600; line-height: 28px; font-size: 18px; color: rgb(5, 14, 51);\"><br></h5>', 'Haqqımızda', '<div><span style=\"color: rgb(28, 30, 33); font-family: Georgia, serif; font-size: 17px; white-space: pre-wrap;\">Networking.Az biznes klubu - şirkət rəhbərləri, holdinqlərin aparıcı mövqeyə sahib olan nümayəndələri və dövlət nümayəndələri arasında biznes əlaqələrinin qurulması və inkişafı üçün tədbirlər keçirən təşkilatdır. Networking – həyatda mürəkkəb vəzifələri və biznes məsələlərini dost və tanışlar vasitəsilə maksimal olaraq tez və səmərəli həll etməyə yönələn sosial və peşəkar fəaliyyətdir. Networking-in əsasını insanlarla inam və etibara əsaslanan uzunmüddətli münasibətlərin qurulması təşkil edir. Biz ümid edirik ki, bizim klub Sizə peşəkar əlaqələrlə yanaşı bir çox insanların dostluğunu da qazandırmağa kömək edəcək. Məqsədimiz yeni tanışlıqların qurulması, müxtəlif işgüzar insanlarla biznes əlaqələrinin qurulması və inkişafıdır. Biz, insanlar arasında əlaqələrin qurulmasında ilk addımı atan olmaq istəyirik. Klub olaraq vəzifəmiz sizi gələcəkdə potensial partnyor və ya müştəriləriniz olacaq digər işgüzar insanlarla tanış etməkdir. </span><span style=\"color: rgb(5, 14, 51);\"><br></span></div>', '157891685620474.jpg', 'We\'ll email you an order confirmation with details and tracking info.', 1, 0, 'Choose Plans & Pricing', 'Choose the best for yourself', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'You are subscribed Successfully.', 'This email has already been taken.', '<div><h4 class=\"heading\"></h4></div><div><h4 class=\"heading\" style=\"margin: 40px 0px 25px; font-weight: 700; line-height: 46px; font-size: 36px; color: rgb(40, 56, 79); text-align: center;\">Oops! You\'re lost...</h4></div>', '<span style=\"color: rgb(51, 51, 51); text-align: center;\">The page you are looking for might have been moved, renamed, or might never existed.</span><br>', '1561878540404.png', '1562486531breadcrumb-bg.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `languages`
+--
+
+CREATE TABLE `languages` (
+  `id` int(191) NOT NULL,
+  `is_default` tinyint(1) NOT NULL DEFAULT 0,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `language` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `languages`
+--
+
+INSERT INTO `languages` (`id`, `is_default`, `active`, `language`, `file`) VALUES
+(1, 0, 0, 'English', '1578628250Yy3eG0YY.json'),
+(4, 1, 1, 'Azerbaijan', '1579005919lLKVJhr7.json');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `members`
+--
+
+CREATE TABLE `members` (
+  `id` int(191) NOT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subtitle` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facebook` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `details` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ceo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `id` int(191) NOT NULL,
+  `order_id` int(191) UNSIGNED DEFAULT NULL,
+  `user_id` int(191) DEFAULT NULL,
+  `vendor_id` int(191) DEFAULT NULL,
+  `product_id` int(191) DEFAULT NULL,
+  `conversation_id` int(191) DEFAULT NULL,
+  `is_read` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `method` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pay_amount` float NOT NULL,
+  `txnid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `charge_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order_number` varchar(255) NOT NULL,
+  `payment_status` varchar(255) NOT NULL,
+  `customer_email` varchar(255) NOT NULL,
+  `customer_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `customer_phone` varchar(255) NOT NULL,
+  `customer_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `customer_city` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `customer_zip` varchar(255) DEFAULT NULL,
+  `status` enum('pending','processing','completed','declined') NOT NULL DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `currency_sign` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtitle` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `method`, `pay_amount`, `txnid`, `charge_id`, `order_number`, `payment_status`, `customer_email`, `customer_name`, `customer_phone`, `customer_address`, `customer_city`, `customer_zip`, `status`, `created_at`, `updated_at`, `currency_sign`, `subtitle`, `title`, `details`, `type`) VALUES
+(37, 'Paypal', 76, NULL, NULL, 'edmB1561875177', 'Declined', 'junajunnun@gmail.com', 'Test Doctor 1', '34534534534', 'Test Address', 'Test City', '1231', 'declined', '2019-06-30 13:12:57', '2019-06-30 13:15:50', '$', 'sed do eiusmod tempor', 'Plan 1', '<ol><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li></ol>', 'Month'),
+(38, 'Stripe', 88, 'txn_1EqwJmJlIV5dN9n7VWrCD8E6', 'ch_1EqwJlJlIV5dN9n7yTNVhNKr', 'mXO71561875311', 'Completed', 'junajunnun@gmail.com', 'Test Doctor 1', '34534534534', 'Test Address', 'Test City', '1231', 'completed', '2019-06-30 13:15:15', '2019-06-30 13:16:06', '$', 'sed do eiusmod tempor', 'Plan 5', '<ol><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li></ol>', 'Month');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `pages`
+--
+
+CREATE TABLE `pages` (
+  `id` int(191) NOT NULL,
+  `title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `meta_tag` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `header` tinyint(1) NOT NULL DEFAULT 0,
+  `footer` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `pages`
+--
+
+INSERT INTO `pages` (`id`, `title`, `slug`, `details`, `meta_tag`, `meta_description`, `header`, `footer`) VALUES
+(1, 'About Us', 'about', '<div helvetica=\"\" neue\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" font-style:=\"\" normal;=\"\" font-variant-ligatures:=\"\" font-variant-caps:=\"\" font-weight:=\"\" 400;=\"\" letter-spacing:=\"\" orphans:=\"\" 2;=\"\" text-align:=\"\" start;=\"\" text-indent:=\"\" 0px;=\"\" text-transform:=\"\" none;=\"\" white-space:=\"\" widows:=\"\" word-spacing:=\"\" -webkit-text-stroke-width:=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);=\"\" text-decoration-style:=\"\" initial;=\"\" text-decoration-color:=\"\" initial;\"=\"\"><h2><img src=\"https://i.imgur.com/wD50uua.jpg\" width=\"615\"><img src=\"https://i.imgur.com/x6rDEkB.jpg\" style=\"color: rgb(70, 85, 65); font-size: 16px;\" width=\"615\"><img src=\"https://i.imgur.com/bWuSBZO.jpg\" style=\"color: rgb(70, 85, 65); font-size: 16px;\" width=\"615\"></h2><p><br></p><p><iframe frameborder=\"0\" src=\"//www.youtube.com/embed/n9Vk1EnwkYQ\" width=\"100%\" height=\"500\" class=\"note-video-clip\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe><br></p><p><br></p><p style=\"text-align: justify; \">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>', NULL, NULL, 1, 0),
+(2, 'Privacy & Policy', 'privacy', '<div helvetica=\"\" neue\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" font-style:=\"\" normal;=\"\" font-variant-ligatures:=\"\" font-variant-caps:=\"\" font-weight:=\"\" 400;=\"\" letter-spacing:=\"\" orphans:=\"\" 2;=\"\" text-align:=\"\" start;=\"\" text-indent:=\"\" 0px;=\"\" text-transform:=\"\" none;=\"\" white-space:=\"\" widows:=\"\" word-spacing:=\"\" -webkit-text-stroke-width:=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);=\"\" text-decoration-style:=\"\" initial;=\"\" text-decoration-color:=\"\" initial;\"=\"\"><h2>Title number 1</h2><p><span style=\"font-weight: 700;\">Lorem Ipsum</span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div><div helvetica=\"\" neue\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" font-style:=\"\" normal;=\"\" font-variant-ligatures:=\"\" font-variant-caps:=\"\" font-weight:=\"\" 400;=\"\" letter-spacing:=\"\" orphans:=\"\" 2;=\"\" text-align:=\"\" start;=\"\" text-indent:=\"\" 0px;=\"\" text-transform:=\"\" none;=\"\" white-space:=\"\" widows:=\"\" word-spacing:=\"\" -webkit-text-stroke-width:=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);=\"\" text-decoration-style:=\"\" initial;=\"\" text-decoration-color:=\"\" initial;\"=\"\"><h2><font size=\"6\">Title number 2</font><br></h2><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p></div><br helvetica=\"\" neue\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" font-style:=\"\" normal;=\"\" font-variant-ligatures:=\"\" font-variant-caps:=\"\" font-weight:=\"\" 400;=\"\" letter-spacing:=\"\" orphans:=\"\" 2;=\"\" text-align:=\"\" start;=\"\" text-indent:=\"\" 0px;=\"\" text-transform:=\"\" none;=\"\" white-space:=\"\" widows:=\"\" word-spacing:=\"\" -webkit-text-stroke-width:=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);=\"\" text-decoration-style:=\"\" initial;=\"\" text-decoration-color:=\"\" initial;\"=\"\"><div helvetica=\"\" neue\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" font-style:=\"\" normal;=\"\" font-variant-ligatures:=\"\" font-variant-caps:=\"\" font-weight:=\"\" 400;=\"\" letter-spacing:=\"\" orphans:=\"\" 2;=\"\" text-align:=\"\" start;=\"\" text-indent:=\"\" 0px;=\"\" text-transform:=\"\" none;=\"\" white-space:=\"\" widows:=\"\" word-spacing:=\"\" -webkit-text-stroke-width:=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);=\"\" text-decoration-style:=\"\" initial;=\"\" text-decoration-color:=\"\" initial;\"=\"\"><h2><font size=\"6\">Title number 3</font><br></h2><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p><p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p></div><h2 helvetica=\"\" neue\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-weight:=\"\" 700;=\"\" line-height:=\"\" 1.1;=\"\" color:=\"\" rgb(51,=\"\" 51,=\"\" 51);=\"\" margin:=\"\" 0px=\"\" 15px;=\"\" font-size:=\"\" 30px;=\"\" font-style:=\"\" normal;=\"\" font-variant-ligatures:=\"\" font-variant-caps:=\"\" letter-spacing:=\"\" orphans:=\"\" 2;=\"\" text-align:=\"\" start;=\"\" text-indent:=\"\" 0px;=\"\" text-transform:=\"\" none;=\"\" white-space:=\"\" widows:=\"\" word-spacing:=\"\" -webkit-text-stroke-width:=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);=\"\" text-decoration-style:=\"\" initial;=\"\" text-decoration-color:=\"\" initial;\"=\"\" 51);\"=\"\" style=\"font-family: \"><font size=\"6\">Title number 9</font><br></h2><p helvetica=\"\" neue\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;=\"\" font-style:=\"\" normal;=\"\" font-variant-ligatures:=\"\" font-variant-caps:=\"\" font-weight:=\"\" 400;=\"\" letter-spacing:=\"\" orphans:=\"\" 2;=\"\" text-align:=\"\" start;=\"\" text-indent:=\"\" 0px;=\"\" text-transform:=\"\" none;=\"\" white-space:=\"\" widows:=\"\" word-spacing:=\"\" -webkit-text-stroke-width:=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);=\"\" text-decoration-style:=\"\" initial;=\"\" text-decoration-color:=\"\" initial;\"=\"\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>', 'test,test1,test2,test3', 'Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `pagesettings`
+--
+
+CREATE TABLE `pagesettings` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `contact_success` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact_email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `side_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `side_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `street` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fax` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `site` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slider` tinyint(1) NOT NULL DEFAULT 1,
+  `service` tinyint(1) NOT NULL DEFAULT 1,
+  `featured` tinyint(1) NOT NULL DEFAULT 1,
+  `small_banner` tinyint(1) NOT NULL DEFAULT 1,
+  `best` tinyint(1) NOT NULL DEFAULT 1,
+  `top_rated` tinyint(1) NOT NULL DEFAULT 1,
+  `large_banner` tinyint(1) NOT NULL DEFAULT 1,
+  `big` tinyint(1) NOT NULL DEFAULT 1,
+  `hot_sale` tinyint(1) NOT NULL DEFAULT 1,
+  `review_blog` tinyint(1) NOT NULL DEFAULT 1,
+  `pricing_plan` tinyint(1) NOT NULL DEFAULT 0,
+  `video_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_link` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_background` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `portfolio_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `portfolio_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `portfolio_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `p_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `p_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `p_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `team_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `team_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `team_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `review_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `review_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `review_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `blog_subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `blog_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `blog_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `pagesettings`
+--
+
+INSERT INTO `pagesettings` (`id`, `contact_success`, `contact_email`, `contact_title`, `contact_text`, `side_title`, `side_text`, `street`, `phone`, `fax`, `email`, `site`, `slider`, `service`, `featured`, `small_banner`, `best`, `top_rated`, `large_banner`, `big`, `hot_sale`, `review_blog`, `pricing_plan`, `video_subtitle`, `video_title`, `video_text`, `video_link`, `video_image`, `video_background`, `service_subtitle`, `service_title`, `service_text`, `portfolio_subtitle`, `portfolio_title`, `portfolio_text`, `p_subtitle`, `p_title`, `p_text`, `team_subtitle`, `team_title`, `team_text`, `review_subtitle`, `review_title`, `review_text`, `blog_subtitle`, `blog_title`, `blog_text`) VALUES
+(1, 'Uğurla göndərildi! Təşəkkür edirik!', 'info@networking.com', '<h3>MÜRACİƏT FORMU</h3>', '<br>', '<h4 class=\"title\" style=\"margin-bottom: 10px; font-weight: 600; line-height: 28px; font-size: 28px;\"><br></h4>', NULL, '3584 Hickory Heights Drive ,Hanover MD 21076, USA 2dwweq', '+994 50 670 01 11', '00 000 000 000', 'info@networking.az', 'https://geniusocean.com/', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL, 'Video', '555', 'https://www.youtube.com/watch?v=dJeGUORxnkg', '1578992041Screenshot_2.png', '1561525391videobg.jpg', 'THE BEST SERVICES', 'We bring the best things', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'NEW PROJECTS FOR OUR CLIENTS', 'Tərəfdaşlar', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'YOU SHOULD KNOW MORE ABOUT US', 'Our Video Presentation', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Our Expert', 'Our team of experienced', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Testimonial', 'Qonaqların təəssüratları', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Tədbirlər', 'Tədbirlər', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `payment_gateways`
+--
+
+CREATE TABLE `payment_gateways` (
+  `id` int(191) NOT NULL,
+  `photo` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(10) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `payment_gateways`
+--
+
+INSERT INTO `payment_gateways` (`id`, `photo`, `title`, `details`, `status`) VALUES
+(2, '1558607469mlogo.png', 'Rocket', '<b>Rocket Mobile No: 01728068515<br>Rocket Reference No: 6622</b>', 1),
+(3, '15586074081234.jpg', 'bKash', '<div style=\"text-align: left;\"><b>Mobile Number: 01732716885</b></div><b><div style=\"text-align: left;\"><b>Reference Number: 778899</b></div></b>', 1),
+(4, NULL, 'QuickCash', '<b>MOBILE NUMBER: 9038423432849</b>', 0),
+(5, NULL, 'Easy Cash', '<b>Please Call at 98989898989</b>', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `portfolios`
+--
+
+CREATE TABLE `portfolios` (
+  `id` int(191) NOT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `portfolios`
+--
+
+INSERT INTO `portfolios` (`id`, `title`, `link`, `photo`) VALUES
+(1, 'Search Engine Optimization', 'https://www.google.com/', '1561537582portfolio.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(191) UNSIGNED NOT NULL,
+  `subtitle` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` double NOT NULL,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `products`
+--
+
+INSERT INTO `products` (`id`, `subtitle`, `title`, `price`, `details`, `type`) VALUES
+(62, 'sed do eiusmod tempor', 'Plan 6', 89, '<span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit.</span><br>', 'Month'),
+(63, 'sed do eiusmod tempor', 'Plan 5', 88, '<ol><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li></ol>', 'Month'),
+(64, 'sed do eiusmod tempor', 'Plan 4', 88, '<span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit.</span><br>', 'Month'),
+(65, 'sed do eiusmod tempor', 'Plan 3', 88, '<span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit.</span><br>', 'Month'),
+(66, 'sed do eiusmod tempor', 'Plan 2', 88, '<span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit.</span><br>', 'Month'),
+(67, 'sed do eiusmod tempor', 'Plan 1', 76, '<ol><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li><li>Lorem ipsum dolor sit amet<br></li></ol>', 'Month');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subtitle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `details` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `photo`, `title`, `subtitle`, `details`) VALUES
+(4, '1561447511people.png', 'Jhon Smith', 'CEO & Founder', 'That conviction is where the process of change really begins—with the realization that just because a certain abuse has taken place in the past doesn’t mean that we have to tole. That conviction is where the process of change really begins'),
+(5, '1561447450people.png', 'Jhon Smith', 'CEO & Founder', 'That conviction is where the process of change really begins—with the realization that just because a certain abuse has taken place in the past doesn’t mean that we have to tole. That conviction is where the process of change really begins'),
+(6, '1561447441people.png', 'Jhon Smith', 'CEO & Founder', 'That conviction is where the process of change really begins—with the realization that just because a certain abuse has taken place in the past doesn’t mean that we have to tole. That conviction is where the process of change really begins');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `seotools`
+--
+
+CREATE TABLE `seotools` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `google_analytics` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_keys` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `seotools`
+--
+
+INSERT INTO `seotools` (`id`, `google_analytics`, `meta_keys`) VALUES
+(1, '<script>//Google Analytics Scriptfffffffffffffffffffffffssssfffffs</script>', 'Genius,Ocean,Sea,Etc,Genius,Ocean,SeaGenius,Ocean,Sea,Etc,Genius,Ocean,SeaGenius,Ocean,Sea,Etc,Genius,Ocean,Sea');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `services`
+--
+
+CREATE TABLE `services` (
+  `id` int(191) NOT NULL,
+  `title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `photo`) VALUES
+(10, 'Finance Service Consultancy', '1561442094icon1.png'),
+(11, 'Finance Service Consultancy', '1561442103icon1.png'),
+(12, 'Finance Service Consultancy', '1561442142icon1.png'),
+(13, 'Finance Service Consultancy', '1561442150icon1.png');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `sliders`
+--
+
+CREATE TABLE `sliders` (
+  `id` int(191) UNSIGNED NOT NULL,
+  `title_text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_size` varchar(50) DEFAULT NULL,
+  `title_color` varchar(50) DEFAULT NULL,
+  `link` text DEFAULT NULL,
+  `photo` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `sliders`
+--
+
+INSERT INTO `sliders` (`id`, `title_text`, `title_size`, `title_color`, `link`, `photo`) VALUES
+(8, NULL, '52', '#ffffff', 'https://www.google.com/', '1579000095png-logo-network.png'),
+(13, NULL, NULL, '#000000', 'https://www.youtube.com/watch?v=ZKUUjgCLOcE', '1579000358Blog Post.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `socialsettings`
+--
+
+CREATE TABLE `socialsettings` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `facebook` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `youtube` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gplus` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `twitter` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `instagram` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `linkedin` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dribble` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `f_status` tinyint(4) NOT NULL DEFAULT 1,
+  `y_status` tinyint(1) NOT NULL DEFAULT 1,
+  `i_status` tinyint(1) DEFAULT 1,
+  `g_status` tinyint(4) NOT NULL DEFAULT 1,
+  `t_status` tinyint(4) NOT NULL DEFAULT 1,
+  `l_status` tinyint(4) NOT NULL DEFAULT 1,
+  `d_status` tinyint(4) NOT NULL DEFAULT 1,
+  `f_check` tinyint(10) DEFAULT NULL,
+  `g_check` tinyint(10) DEFAULT NULL,
+  `fclient_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fclient_secret` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fredirect` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gclient_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gclient_secret` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gredirect` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `socialsettings`
+--
+
+INSERT INTO `socialsettings` (`id`, `facebook`, `youtube`, `gplus`, `twitter`, `instagram`, `linkedin`, `dribble`, `f_status`, `y_status`, `i_status`, `g_status`, `t_status`, `l_status`, `d_status`, `f_check`, `g_check`, `fclient_id`, `fclient_secret`, `fredirect`, `gclient_id`, `gclient_secret`, `gredirect`) VALUES
+(1, 'https://www.facebook.com/networking.azerbaijan/', 'https://www.youtube.com/results?search_query=networking.az', 'https://plus.google.com/', 'https://twitter.com/', 'https://www.instagram.com/networking.az/', 'https://www.linkedin.com/company/networking-az/', 'https://dribbble.com/', 1, 1, 1, 0, 0, 1, 0, 1, 1, '503140663460329', 'f66cd670ec43d14209a2728af26dcc43', 'https://localhost/royalcommerce/auth/facebook/callback', '904681031719-sh1aolu42k7l93ik0bkiddcboghbpcfi.apps.googleusercontent.com', 'yGBWmUpPtn5yWhDAsXnswEX3', 'http://localhost/marketplace/auth/google/callback');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `social_providers`
+--
+
+CREATE TABLE `social_providers` (
+  `id` int(191) NOT NULL,
+  `user_id` int(191) NOT NULL,
+  `provider_id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `provider` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `social_providers`
+--
+
+INSERT INTO `social_providers` (`id`, `user_id`, `provider_id`, `provider`, `created_at`, `updated_at`) VALUES
+(3, 17, '102485372716947456487', 'google', '2019-06-19 17:06:00', '2019-06-19 17:06:00'),
+(4, 18, '109955884428371086401', 'google', '2019-06-19 17:17:04', '2019-06-19 17:17:04');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `subscribers`
+--
+
+CREATE TABLE `subscribers` (
+  `id` int(191) NOT NULL,
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `subscribers`
+--
+
+INSERT INTO `subscribers` (`id`, `email`) VALUES
+(1, 'user@gmail.com'),
+(2, 'admin@gmail.com'),
+(3, 'vendor@gmail.com'),
+(4, 'vendor1@gmail.com'),
+(5, 'shaoneel@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `vpresentations`
+--
+
+CREATE TABLE `vpresentations` (
+  `id` int(191) NOT NULL,
+  `title` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `vpresentations`
+--
+
+INSERT INTO `vpresentations` (`id`, `title`, `photo`) VALUES
+(1, '360 Best Projects', '1561542255statistics1.png'),
+(2, '360 Best Projects', '1561542327statistics1.png'),
+(5, '360 Best Projects', '1561542384statistics1.png'),
+(6, '360 Best Projects', '1561542391statistics1.png');
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `admins_email_unique` (`email`);
+
+--
+-- Индексы таблицы `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `blog_categories`
+--
+ALTER TABLE `blog_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `currencies`
+--
+ALTER TABLE `currencies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `email_templates`
+--
+ALTER TABLE `email_templates`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `faqs`
+--
+ALTER TABLE `faqs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `features`
+--
+ALTER TABLE `features`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `generalsettings`
+--
+ALTER TABLE `generalsettings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `languages`
+--
+ALTER TABLE `languages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `members`
+--
+ALTER TABLE `members`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `pages`
+--
+ALTER TABLE `pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `pagesettings`
+--
+ALTER TABLE `pagesettings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `payment_gateways`
+--
+ALTER TABLE `payment_gateways`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `portfolios`
+--
+ALTER TABLE `portfolios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `seotools`
+--
+ALTER TABLE `seotools`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `sliders`
+--
+ALTER TABLE `sliders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `socialsettings`
+--
+ALTER TABLE `socialsettings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `social_providers`
+--
+ALTER TABLE `social_providers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `subscribers`
+--
+ALTER TABLE `subscribers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `vpresentations`
+--
+ALTER TABLE `vpresentations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT для таблицы `blog_categories`
+--
+ALTER TABLE `blog_categories`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT для таблицы `currencies`
+--
+ALTER TABLE `currencies`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `email_templates`
+--
+ALTER TABLE `email_templates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `faqs`
+--
+ALTER TABLE `faqs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `features`
+--
+ALTER TABLE `features`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT для таблицы `generalsettings`
+--
+ALTER TABLE `generalsettings`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `languages`
+--
+ALTER TABLE `languages`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `members`
+--
+ALTER TABLE `members`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT для таблицы `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
+--
+-- AUTO_INCREMENT для таблицы `pages`
+--
+ALTER TABLE `pages`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT для таблицы `pagesettings`
+--
+ALTER TABLE `pagesettings`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `payment_gateways`
+--
+ALTER TABLE `payment_gateways`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `portfolios`
+--
+ALTER TABLE `portfolios`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(191) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT для таблицы `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `seotools`
+--
+ALTER TABLE `seotools`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT для таблицы `sliders`
+--
+ALTER TABLE `sliders`
+  MODIFY `id` int(191) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT для таблицы `socialsettings`
+--
+ALTER TABLE `socialsettings`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `social_providers`
+--
+ALTER TABLE `social_providers`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `subscribers`
+--
+ALTER TABLE `subscribers`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `vpresentations`
+--
+ALTER TABLE `vpresentations`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
