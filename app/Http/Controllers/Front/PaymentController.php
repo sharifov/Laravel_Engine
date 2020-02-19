@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Front;
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use App\Models\Order;
 use App\Models\Currency;
 use App\Models\Generalsetting;

@@ -112,7 +112,8 @@
     <section class="blog blog-page" id="blog">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-8">
+
 
              @forelse($blogs as $blogg)
 
@@ -158,7 +159,7 @@
         </div>
 
           </div>
-        <!-- <div class="col-lg-4">
+        <div class="col-lg-4">
           <div class="blog-aside">
 
             {{-- Search Section --}}
@@ -257,7 +258,7 @@
             </div>
 
           </div>
-        </div> -->
+        </div>
         </div>
       </div>
     </section>

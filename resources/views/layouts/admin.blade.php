@@ -5,8 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="author" content="GeniusOcean">
-    	<meta name="csrf-token" content="{{ csrf_token() }}">
+    	<meta name="author" content="JEWWWEB">
 		<!-- Title -->
 		<title>{{$gs->title}}</title>
 		<!-- favicon -->
@@ -22,9 +21,6 @@
 		<link href="{{asset('assets/admin/plugins/fullside-menu/waves.min.css')}}" rel="stylesheet" />
 
 		<link href="{{asset('assets/admin/css/plugin.css')}}" rel="stylesheet" />
-
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
-		
 		<link href="{{asset('assets/admin/css/jquery.tagit.css')}}" rel="stylesheet" />		
     	<link rel="stylesheet" href="{{ asset('assets/admin/css/bootstrap-coloroicker.css') }}">
 		<!-- Main Css -->
@@ -331,7 +327,6 @@
 
 		<!-- Dashboard Core -->
 		<script src="{{asset('assets/admin/js/vendors/jquery-1.12.4.min.js')}}"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 		<script src="{{asset('assets/admin/js/vendors/bootstrap.min.js')}}"></script>
 		<script src="{{asset('assets/admin/js/jqueryui.min.js')}}"></script>
 		<!-- Fullside-menu Js-->
@@ -341,16 +336,14 @@
 		<script src="{{asset('assets/admin/js/plugin.js')}}"></script>
 		<script src="{{asset('assets/admin/js/Chart.min.js')}}"></script>
 		<script src="{{asset('assets/admin/js/tag-it.js')}}"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
-
+		<script src="{{asset('assets/admin/js/nicEdit.js')}}"></script>
         <script src="{{asset('assets/admin/js/bootstrap-colorpicker.min.js') }}"></script>
         <script src="{{asset('assets/admin/js/notify.js') }}"></script>
 		<script src="{{asset('assets/admin/js/load.js')}}"></script>
 		<!-- Custom Js-->
 		<script src="{{asset('assets/admin/js/custom.js')}}"></script>
 		<!-- AJAX Js-->
-		<script src="{{asset('assets/admin/js/myscript.js?v=9')}}"></script>
+		<script src="{{asset('assets/admin/js/myscript.js')}}"></script>
 		@yield('scripts')
 	</body>
 

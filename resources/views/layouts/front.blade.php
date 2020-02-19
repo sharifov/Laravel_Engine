@@ -8,10 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     @if(isset($page->meta_tag) && isset($page->meta_description))
         <meta name="keywords" content="{{ $page->meta_tag }}">
-        <meta name="description" content="{{ $page->meta_description }}">
+        <meta name="description" content="{{ $page->meta_description }}"> 
     @elseif(isset($blog->meta_tag) && isset($blog->meta_description))
         <meta name="keywords" content="{{ $blog->meta_tag }}">
-        <meta name="description" content="{{ $blog->meta_description }}">
+        <meta name="description" content="{{ $blog->meta_description }}"> 
     @else
 	    <meta name="keywords" content="{{ $seo->meta_keys }}">
 	    <meta name="author" content="GeniusOcean">
@@ -56,7 +56,7 @@
 								<ul class="social-link">
 
 
-                               	     @if(App\Models\Socialsetting::find(1)->f_status)
+                               	     @if(App\Models\Socialsetting::find(1)->f_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->facebook }}" target="_blank">
                                             <i class="fab fa-facebook-f"></i>
@@ -64,31 +64,15 @@
                                       </li>
                                       @endif
 
-                                      @if(App\Models\Socialsetting::find(1)->y_status)
-                                      <li>
-                                        <a href="{{ App\Models\Socialsetting::find(1)->youtube }}" target="_blank">
-                                            <i class="fab fa-youtube-square"></i>
-                                        </a>
-                                      </li>
-                                      @endif
-
-                                      @if(App\Models\Socialsetting::find(1)->i_status)
-                                      <li>
-                                        <a href="{{ App\Models\Socialsetting::find(1)->instagram }}" target="_blank">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                      </li>
-                                      @endif
-
-                                      @if(App\Models\Socialsetting::find(1)->g_status)
+                                      @if(App\Models\Socialsetting::find(1)->g_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->gplus }}" target="_blank">
-                                            <i class="fab fa-gplus"></i>
+                                            <i class="fab fa-google-plus-g"></i>
                                         </a>
                                       </li>
                                       @endif
 
-                                      @if(App\Models\Socialsetting::find(1)->t_status)
+                                      @if(App\Models\Socialsetting::find(1)->t_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->twitter }}" target="_blank">
                                             <i class="fab fa-twitter"></i>
@@ -96,7 +80,7 @@
                                       </li>
                                       @endif
 
-                                      @if(App\Models\Socialsetting::find(1)->l_status)
+                                      @if(App\Models\Socialsetting::find(1)->l_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->linkedin }}" target="_blank">
                                             <i class="fab fa-linkedin-in"></i>
@@ -107,16 +91,14 @@
 								</ul>
 							</div>
 
-@if($gs->is_language)
 							<div class="right-content">
+
 									@if($gs->is_currency == 1)
 										<div class="language-selector">
 											<i class="fas fa-globe"></i>
 											<select name="language" class="language selectors">
 										@foreach(DB::table('languages')->get() as $language)
-											@if($language->active)
-												<option value="{{route('front.language',$language->id)}}" {{ Session::has('language') ? ( Session::get('language') == $language->id ? 'selected' : '' ) : (DB::table('languages')->where('is_default','=',1)->first()->id == $language->id ? 'selected' : '') }} >{{$language->language}}</option>
-											@endif
+											<option value="{{route('front.language',$language->id)}}" {{ Session::has('language') ? ( Session::get('language') == $language->id ? 'selected' : '' ) : (DB::table('languages')->where('is_default','=',1)->first()->id == $language->id ? 'selected' : '') }} >{{$language->language}}</option>
 										@endforeach
 											</select>
 										</div>
@@ -124,17 +106,20 @@
 
 									@if($gs->is_currency == 1)
 
-{{--										<div class="currency-selector">--}}
-{{--										<select name="currency" class="currency selectors">--}}
-{{--										@foreach(DB::table('currencies')->get() as $currency)--}}
-{{--											<option value="{{route('front.currency',$currency->id)}}" {{ Session::has('currency') ? ( Session::get('currency') == $currency->id ? 'selected' : '' ) : (DB::table('currencies')->where('is_default','=',1)->first()->id == $currency->id ? 'selected' : '') }} >{{$currency->name}}</option>--}}
-{{--										@endforeach--}}
-{{--										</select>--}}
-{{--										</div>--}}
+										<div class="currency-selector">
+										<select name="currency" class="currency selectors">
+										@foreach(DB::table('currencies')->get() as $currency)
+											<option value="{{route('front.currency',$currency->id)}}" {{ Session::has('currency') ? ( Session::get('currency') == $currency->id ? 'selected' : '' ) : (DB::table('currencies')->where('is_default','=',1)->first()->id == $currency->id ? 'selected' : '') }} >{{$currency->name}}</option>
+										@endforeach
+										</select>
+										</div>
 
 									@endif
+
+
 							</div>
-@endif
+
+
 						</div>
 					</div>
 				</div>
@@ -143,12 +128,12 @@
 		<!-- Top Header Area End -->
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12">                 
 					<nav class="navbar navbar-expand-lg navbar-light">
 						<a class="navbar-brand" href="{{ route('front.index') }}">
-							<img class="new-logo" src="{{ asset('assets/images/'.$gs->logo) }}" alt="">
+							<img src="{{ asset('assets/images/'.$gs->logo) }}" alt="">
 						</a>
-						<button class="navbar-toggler navbar_toggler " type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
 							aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
@@ -158,43 +143,29 @@
 									<a class="nav-link" href="{{ route('front.index') }}">{{ $langg->lang2 }}</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('front.about') }}">Mediada biz</a>
+									<a class="nav-link" href="{{ route('front.blog') }}">{{ $langg->lang4 }}</a>
 								</li>
+								@if($gs->is_faq == 1)
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('front.part') }}">Komandamız</a>
+									<a class="nav-link" href="{{ route('front.faq') }}">{{ $langg->lang5 }} </a>
 								</li>
-{{--								<li class="nav-item">--}}
-{{--									<a class="nav-link" href="{{ route('front.blog') }}">{{ $langg->lang4 }}</a>--}}
-{{--								</li>--}}
-								<li class="nav-item">
-									<a class="nav-link" href="{{ route('front.blog') }}">Tədbirlər</a>
+								@endif
+								@if(DB::table('pages')->count() > 0)
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										{{ $langg->lang6 }}
+									</a>
+									<ul class="dropdown-menu">
+										@foreach(DB::table('pages')->orderBy('id','desc')->get() as $data)
+										<li><a class="dropdown-item" href="{{ route('front.page',$data->slug) }}"> <i class="fa fa-angle-double-right"></i>{{ $data->title }}</a></li>
+										@endforeach
+									</ul>
 								</li>
-{{--								@if($gs->is_faq == 1)--}}
-{{--								<li class="nav-item">--}}
-{{--									<a class="nav-link" href="{{ route('front.faq') }}">{{ $langg->lang5 }} </a>--}}
-{{--								</li>--}}
-{{--								@endif--}}
-{{--								@if(DB::table('pages')->count() > 0)--}}
-{{--								<li class="nav-item dropdown">--}}
-{{--									<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--										{{ $langg->lang6 }}--}}
-{{--									</a>--}}
-{{--									<ul class="dropdown-menu">--}}
-{{--										@foreach(DB::table('pages')->orderBy('id','desc')->get() as $data)--}}
-{{--										<li><a class="dropdown-item" href="{{ route('front.page',$data->slug) }}"> <i class="fa fa-angle-double-right"></i>{{ $data->title }}</a></li>--}}
-{{--										@endforeach--}}
-{{--									</ul>--}}
-{{--								</li>--}}
-{{--								@endif--}}
-{{--								@if($gs->is_contact == 1)--}}
-{{--									<li class="nav-item">--}}
-{{--										<a class="nav-link" href="{{ route('front.contact') }}">{{ $langg->lang7 }}</a>--}}
-{{--									</li> --}}
-{{--								@endif--}}
+								@endif
 								@if($gs->is_contact == 1)
-									<li class="nav-item">
-										<a class="nav-link" href="{{ route('front.contact') }}">Müraciət formu</a>
-									</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{ route('front.contact') }}">{{ $langg->lang7 }}</a>
+								</li>
 								@endif
 							</ul>
 						</div>
@@ -211,37 +182,55 @@
 <footer class="footer" id="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-lg-7">
+			<div class="col-md-6 col-lg-4">
 				<div class="footer-widget about-widget">
 					<div class="footer-logo">
 						<a href="{{ route('front.index') }}">
 							<img src="{{ asset('assets/images/'.$gs->logo) }}" alt="">
 						</a>
 					</div>
-					<div class="footer-widget address-widget">
-						<ul class="about-info">
-							@if(App\Models\Pagesetting::find(1)->phone != null)
-							<li>
-								<p>
-									<i class="fas fa-phone"></i>
-									{{ App\Models\Pagesetting::find(1)->phone }}
-								</p>
-							</li>
-							@endif
-							@if(App\Models\Pagesetting::find(1)->email != null)
-							<li>
-								<p>
-									<i class="far fa-envelope"></i>
-									{{ App\Models\Pagesetting::find(1)->email }}
-								</p>
-							</li>
-							@endif
-						</ul>
+					<div class="text">
+						<p>
+							{{ $gs->footer }}
+						</p>
 					</div>
-
+					
 				</div>
 			</div>
-			<div class="col-md-6 col-lg-5">
+			<div class="col-md-6 col-lg-4">
+				<div class="footer-widget address-widget">
+					<h4 class="title">
+						{{ $langg->lang49 }}
+					</h4>
+					<ul class="about-info">
+						@if(App\Models\Pagesetting::find(1)->street != null)
+						<li>
+							<p>
+									<i class="fas fa-globe"></i>
+								{{ App\Models\Pagesetting::find(1)->street }}
+							</p>
+						</li>
+						@endif
+						@if(App\Models\Pagesetting::find(1)->phone != null)
+						<li>
+							<p>
+									<i class="fas fa-phone"></i>
+									{{ App\Models\Pagesetting::find(1)->phone }}
+							</p>
+						</li>
+						@endif
+						@if(App\Models\Pagesetting::find(1)->email != null)
+						<li>
+							<p>
+									<i class="far fa-envelope"></i>
+									{{ App\Models\Pagesetting::find(1)->email }}
+							</p>
+						</li>
+						@endif
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
 					<div class="footer-widget  footer-newsletter-widget">
 						<h4 class="title">
 							{{ $langg->lang50 }}
@@ -261,7 +250,7 @@
 							</h4>
 							<div class="fotter-social-links">
 								<ul>
-                               	     @if(App\Models\Socialsetting::find(1)->f_status)
+                               	     @if(App\Models\Socialsetting::find(1)->f_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->facebook }}" class="facebook" target="_blank">
                                             <i class="fab fa-facebook-f"></i>
@@ -269,31 +258,15 @@
                                       </li>
                                       @endif
 
-                                      @if(App\Models\Socialsetting::find(1)->g_status)
+                                      @if(App\Models\Socialsetting::find(1)->g_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->gplus }}" class="google-plus" target="_blank">
-                                            <i class="fab fa-gplus"></i>
+                                            <i class="fab fa-google-plus-g"></i>
                                         </a>
                                       </li>
                                       @endif
 
-                                      @if(App\Models\Socialsetting::find(1)->y_status)
-                                      <li>
-                                        <a href="{{ App\Models\Socialsetting::find(1)->youtube }}" class="youtube" target="_blank">
-                                            <i class="fab fa-youtube-square"></i>
-                                        </a>
-                                      </li>
-                                      @endif
-
-                                      @if(App\Models\Socialsetting::find(1)->i_status)
-                                      <li>
-                                        <a href="{{ App\Models\Socialsetting::find(1)->instagram }}" class="instagram" target="_blank">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                      </li>
-                                      @endif
-
-                                      @if(App\Models\Socialsetting::find(1)->t_status)
+                                      @if(App\Models\Socialsetting::find(1)->t_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->twitter }}" class="twitter" target="_blank">
                                             <i class="fab fa-twitter"></i>
@@ -301,7 +274,7 @@
                                       </li>
                                       @endif
 
-                                      @if(App\Models\Socialsetting::find(1)->l_status)
+                                      @if(App\Models\Socialsetting::find(1)->l_status == 1)
                                       <li>
                                         <a href="{{ App\Models\Socialsetting::find(1)->linkedin }}" class="linkedin" target="_blank">
                                             <i class="fab fa-linkedin-in"></i>
@@ -312,7 +285,7 @@
 								</ul>
 							</div>
 						</div>
-
+				
 					</div>
 			</div>
 		</div>
@@ -323,7 +296,7 @@
 				<div class="col-lg-12">
 						<div class="content">
 							<div class="content">
-								<p><a href="http://www.webcoder.az/az" target="_blank">{!! $gs->copyright !!}</a></p>
+								<p>{!! $gs->copyright !!}</p>
 						</div>
 					</div>
 				</div>
@@ -348,7 +321,7 @@
 
 	<!-- jquery -->
 	<script src="{{ asset('assets/front/js/jquery.js') }}"></script>
- 	 <script src="{{asset('assets/front/jquery-ui/jquery-ui.min.js')}}"></script>
+ 	 <script src="{{asset('assets/front/jquery-ui/jquery-ui.min.js')}}"></script>	
 	<!-- bootstrap -->
 	<script src="{{ asset('assets/front/js/bootstrap.min.js') }}"></script>
 	<!-- popper -->

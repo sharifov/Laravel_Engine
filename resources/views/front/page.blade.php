@@ -33,14 +33,12 @@
 
 <section class="about">
     <div class="container">
-
       <div class="row">
         <div class="col-lg-12">
           <div class="about-info">
             <h4 class="title">
               {{ $page->title }}
             </h4>
-
             <p>
               {!! $page->details !!}
             </p>

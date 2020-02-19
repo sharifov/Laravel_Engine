@@ -10,7 +10,7 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Generalsetting;
 use App\Models\Subscriber;
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use Illuminate\Support\Facades\Session;
 use InvalidArgumentException;
 use Markury\MarkuryPost;
@@ -32,9 +32,9 @@ class FrontendController extends Controller
         $features =  DB::table('features')->get();
         $reviews =  DB::table('reviews')->get();
         $portfolios =  DB::table('portfolios')->get();
-        $members =  DB::table('members')->orderBy('id', 'DESC')->get();
-        $present =  DB::table('vpresentations')->get();
-        $lblogs =  DB::table('blogs')->orderBy('id','desc')->take(4)->get();
+        $members =  DB::table('members')->get();
+        $present =  DB::table('vpresentations')->get();      
+        $lblogs =  DB::table('blogs')->orderBy('id','desc')->take(4)->get();      
         $ps = DB::table('pagesettings')->find(1);
         $products = Product::orderBy('id','desc')->get();
 	    return view('front.index',compact('ps','sliders','services','features','reviews','members','portfolios','present','lblogs','products'));
@@ -51,52 +51,6 @@ class FrontendController extends Controller
         Session::put('language', $id);
         return redirect()->back();
     }
-    
-    public function about($slug = 'about'){
-
-        $page =  DB::table('pages')->where('slug', $slug)->first();
-        if(empty($page)) return view('errors.404');
-
-        preg_match_all('/(<img[^>]+>)/i', $page->details, $matches);
-
-        $sliders = [];
-
-        if($matches){
-            //$sliders = array_map(function($val){ return preg_replace('/(width|height)="\d.*"/', '', $val);}, $matches[0]);
-            $sliders = array_map(function($val){ return preg_replace('/(<[^>]+) style=".*?"/i', '$1', $val);}, $matches[0]);
-            $page->details = preg_replace('/(<img[^>]+>)/i', '', $page->details);
-        }
-
-        return view('front.about', compact('page', 'sliders'));
-    }
-
-    public function part(){
-        $title = 'Partnyorlar';
-        $ps = DB::table('pagesettings')->first();
-        $members =  DB::table('members')->orderBy('id', 'DESC')->get();
-        return view('front.partnyor', compact('members', 'ps', 'title'));
-    }
-
-    public function partshow($slug=false){
-        
-        if(!$slug) return view('errors.404');
-
-        $member = DB::table('members')->where('company_name', $slug)->first();
-
-        $prev_title = 'Partnyorlar';
-
-        preg_match_all('/(<img[^>]+>)/i', $member->details, $matches);
-
-        $sliders = [];
-
-        if($matches){
-            //$sliders = array_map(function($val){ return preg_replace('/(width|height)="\d.*"/', '', $val);}, $matches[0]);
-            $sliders = array_map(function($val){ return preg_replace('/(<[^>]+) style=".*?"/i', '$1', $val);}, $matches[0]);
-            $member->details = preg_replace('/(<img[^>]+>)/i', '', $member->details);
-        }
-
-        return view('front.partshow', compact('member', 'sliders', 'prev_title'));
-    }
 
 // LANGUAGE SECTION ENDS
 
@@ -108,7 +62,7 @@ class FrontendController extends Controller
         Session::put('currency', $id);
         return redirect()->back();
     }
-
+    
 // CURRENCY SECTION ENDS
 
 
@@ -173,7 +127,7 @@ class FrontendController extends Controller
         }
         $tags = array_unique(explode(',',$tagz));
 
-        $archives= Blog::orderBy('created_at','desc')->get()->groupBy(function($item){ return $item->created_at->format('F Y'); })->take(5)->toArray();
+        $archives= Blog::orderBy('created_at','desc')->get()->groupBy(function($item){ return $item->created_at->format('F Y'); })->take(5)->toArray();        
         $bcats = BlogCategory::all();
         $blogs = Blog::where('tags', 'like', '%' . $slug . '%')->paginate(3);
             if($request->ajax()){
@@ -192,7 +146,7 @@ class FrontendController extends Controller
         }
         $tags = array_unique(explode(',',$tagz));
 
-        $archives= Blog::orderBy('created_at','desc')->get()->groupBy(function($item){ return $item->created_at->format('F Y'); })->take(5)->toArray();
+        $archives= Blog::orderBy('created_at','desc')->get()->groupBy(function($item){ return $item->created_at->format('F Y'); })->take(5)->toArray();       
         $bcats = BlogCategory::all();
         $search = $request->search;
         $blogs = Blog::where('title', 'like', '%' . $search . '%')->orWhere('details', 'like', '%' . $search . '%')->paginate(3);
@@ -213,7 +167,7 @@ class FrontendController extends Controller
         }
         $tags = array_unique(explode(',',$tagz));
 
-        $archives= Blog::orderBy('created_at','desc')->get()->groupBy(function($item){ return $item->created_at->format('F Y'); })->take(5)->toArray();
+        $archives= Blog::orderBy('created_at','desc')->get()->groupBy(function($item){ return $item->created_at->format('F Y'); })->take(5)->toArray();        
         $bcats = BlogCategory::all();
         $date = \Carbon\Carbon::parse($slug)->format('Y-m');
         $blogs = Blog::where('created_at', 'like', '%' . $date . '%')->paginate(3);
@@ -283,9 +237,9 @@ class FrontendController extends Controller
         $page =  DB::table('pages')->where('slug',$slug)->first();
         if(empty($page))
         {
-            return view('errors.404');
+            return view('errors.404');            
         }
-
+        
         return view('front.page',compact('page'));
     }
 // -------------------------------- PAGE SECTION ENDS----------------------------------------
@@ -294,11 +248,9 @@ class FrontendController extends Controller
 // -------------------------------- CONTACT SECTION ----------------------------------------
 	public function contact()
 	{
-
         $this->code_image();
         $ps =  DB::table('pagesettings')->where('id','=',1)->first();
 		return view('front.contact',compact('ps'));
-
 	}
 
     // Refresh Capcha Code
@@ -312,11 +264,10 @@ class FrontendController extends Controller
     public function contactemail(Request $request)
     {
         // Capcha Check
-        /*
         $value = session('captcha_string');
         if ($request->codes != $value){
-            return response()->json(array('errors' => [ 0 => 'Please enter Correct Capcha Code.' ]));
-        }*/
+            return response()->json(array('errors' => [ 0 => 'Please enter Correct Capcha Code.' ]));    
+        }
 
         // Login Section
         $ps = DB::table('pagesettings')->where('id','=',1)->first();
@@ -324,20 +275,9 @@ class FrontendController extends Controller
         $gs = Generalsetting::findOrFail(1);
         $to = $request->to;
         $name = $request->name;
-        $company = $request->company;
-        $surname = $request->surname;
         $phone = $request->phone;
         $from = $request->email;
-        $position = $request->position;
-        $website = $request->website;
-        $msg = "Name: ".$name."\n
-                Surname: ".$surname."\n
-                Email: ".$from."\n
-                Position: ".$from."\n
-                Phone: ".$position."\n
-                Company: ".$company."\n
-                Web Site: ".$website."\n
-                Message: ".$request->text;
+        $msg = "Name: ".$name."\nEmail: ".$from."\nPhone: ".$request->phone."\nMessage: ".$request->text;
         if($gs->is_smtp)
         {
         $data = [
@@ -346,7 +286,7 @@ class FrontendController extends Controller
             'body' => $msg,
         ];
 
-        $mailer = new GeniusMailer();
+        $mailer = new JEWMailer();
         $mailer->sendCustomMail($data);
         }
         else
@@ -357,14 +297,13 @@ class FrontendController extends Controller
         // Login Section Ends
 
         // Redirect Section
-        return response()->json($ps->contact_success);
+        return response()->json($ps->contact_success);    
     }
 
     // Capcha Code Image
     private function  code_image()
     {
         $actual_path = str_replace('project','',base_path());
-//        dd($actual_path);
         $image = imagecreatetruecolor(200, 50);
         $background_color = imagecolorallocate($image, 255, 255, 255);
         imagefilledrectangle($image,0,0,200,50,$background_color);
@@ -375,7 +314,7 @@ class FrontendController extends Controller
             imagesetpixel($image,rand()%200,rand()%50,$pixel);
         }
 
-        $font = $actual_path.'/public/assets/front/fonts/NotoSans-Bold.ttf';
+        $font = $actual_path.'assets/front/fonts/NotoSans-Bold.ttf';
         $allowed_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         $length = strlen($allowed_letters);
         $letter = $allowed_letters[rand(0, $length-1)];
@@ -395,7 +334,7 @@ class FrontendController extends Controller
             imagesetpixel($image,rand()%200,rand()%50,$pixels);
         }
         session(['captcha_string' => $word]);
-        imagepng($image, $actual_path."/public/assets/images/capcha_code.png");
+        imagepng($image, $actual_path."assets/images/capcha_code.png");
     }
 
 // -------------------------------- CONTACT SECTION ENDS----------------------------------------
@@ -407,12 +346,12 @@ class FrontendController extends Controller
         $gs = DB::table('generalsettings')->find(1);
         $subs = Subscriber::where('email','=',$request->email)->first();
         if(isset($subs)){
-        return response()->json(array('errors' => [ 0 => $gs->subscribe_error ]));
+        return response()->json(array('errors' => [ 0 => $gs->subscribe_error ]));           
         }
         $subscribe = new Subscriber;
         $subscribe->fill($request->all());
         $subscribe->save();
-        return response()->json($gs->subscribe_success);
+        return response()->json($gs->subscribe_success);   
     }
 
 

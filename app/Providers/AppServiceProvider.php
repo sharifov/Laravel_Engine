@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;

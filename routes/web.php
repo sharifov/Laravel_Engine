@@ -282,11 +282,7 @@ Route::get('/vpresentation/delete/{id}', 'Admin\VpresentationController@destroy'
   Route::get('/page-settings/best-seller', 'Admin\PageSettingController@best_seller')->name('admin-ps-best-seller');
   Route::get('/page-settings/video', 'Admin\PageSettingController@video')->name('admin-ps-video');
   Route::get('/page-settings/blog', 'Admin\PageSettingController@blog')->name('admin-ps-blog');
-  
-  Route::group(['middleware'=>'web'],function(){
-      Route::post('/page-settings/update/all', 'Admin\PageSettingController@update')->name('admin-ps-update');
-  });
-  
+  Route::post('/page-settings/update/all', 'Admin\PageSettingController@update')->name('admin-ps-update');
   Route::post('/page-settings/update/home', 'Admin\PageSettingController@homeupdate')->name('admin-ps-homeupdate');
   //------------ ADMIN PAGE SETTINGS SECTION ENDS ------------
 
@@ -355,7 +351,6 @@ Route::get('/vpresentation/delete/{id}', 'Admin\VpresentationController@destroy'
   Route::post('/languages/create', 'Admin\LanguageController@store')->name('admin-lang-store');
   Route::post('/languages/edit/{id}', 'Admin\LanguageController@update')->name('admin-lang-update');
   Route::get('/languages/status/{id1}/{id2}', 'Admin\LanguageController@status')->name('admin-lang-st');
-  Route::get('/languages/active/{id1}/{id2}', 'Admin\LanguageController@active')->name('admin-lang-act');
   Route::get('/languages/delete/{id}', 'Admin\LanguageController@destroy')->name('admin-lang-delete');
 
   //------------ ADMIN LANGUAGE SETTINGS SECTION ENDS ------------
@@ -406,6 +401,7 @@ Route::get('finalize', 'Front\FrontendController@finalize');
 
 
 // ************************************ FRONT SECTION **********************************************
+
   Route::get('/', 'Front\FrontendController@index')->name('front.index');
   Route::get('/currency/{id}', 'Front\FrontendController@currency')->name('front.currency');
   Route::get('/language/{id}', 'Front\FrontendController@language')->name('front.language');
@@ -446,13 +442,9 @@ Route::get('finalize', 'Front\FrontendController@finalize');
   Route::post('/subscriber/store', 'Front\FrontendController@subscribe')->name('front.subscribe');
 
   // SUBSCRIBE SECTION ENDS
-
-    Route::get('/part','Front\FrontendController@part')->name('front.part');
-    Route::get('/about','Front\FrontendController@about')->name('front.about');
-    Route::get('/partshow/{slug?}','Front\FrontendController@partshow')->name('front.partshow');
+  
   // PAGE SECTION
   Route::get('/{slug}','Front\FrontendController@page')->name('front.page');
-
   // PAGE SECTION ENDS
   
 // ************************************ FRONT SECTION ENDS**********************************************

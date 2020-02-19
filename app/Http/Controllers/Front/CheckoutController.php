@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use App\Models\Product;
 use App\Models\PaymentGateway;
 use App\Models\Currency;

@@ -49,12 +49,6 @@ class SocialSettingController extends Controller
         if ($request->f_status == ""){
             $input['f_status'] = 0;
         }
-        if ($request->i_status == ""){
-            $input['i_status'] = 0;
-        }
-        if ($request->y_status == ""){
-            $input['y_status'] = 0;
-        }
         if ($request->t_status == ""){
             $input['t_status'] = 0;
         }

@@ -26,14 +26,10 @@ class MemberController extends Controller
                                 $photo = $data->photo ? url('assets/images/member/'.$data->photo):url('assets/images/noimage.png');
                                 return '<img src="' . $photo . '" alt="Image">';
                             })
-                            ->editColumn('ceo', function(Member $data) {
-                                $ceo = $data->ceo ? url('assets/images/member/'.$data->ceo):url('assets/images/noimage.png');
-                                return '<img src="' . $ceo . '" alt="Image">';
-                            })
                             ->addColumn('action', function(Member $data) {
                                 return '<div class="action-list"><a data-href="' . route('admin-member-edit',$data->id) . '" class="edit" data-toggle="modal" data-target="#modal1"> <i class="fas fa-edit"></i>Edit</a><a href="javascript:;" data-href="' . route('admin-member-delete',$data->id) . '" data-toggle="modal" data-target="#confirm-delete" class="delete"><i class="fas fa-trash-alt"></i></a></div>';
                             }) 
-                            ->rawColumns(['photo', 'ceo', 'action'])
+                            ->rawColumns(['photo', 'action'])
                             ->toJson(); //--- Returning Json Data To Client Side
     }
 
@@ -54,10 +50,8 @@ class MemberController extends Controller
     {
         //--- Validation Section
         $rules = [
-            'photo'      => 'required|mimes:jpeg,jpg,png,svg',
-            'ceo'      => 'required|mimes:jpeg,jpg,png,svg',
-            'company_name'  => 'required'
-        ];
+               'photo'      => 'required|mimes:jpeg,jpg,png,svg',
+                ];
 
         $validator = Validator::make(Input::all(), $rules);
         
@@ -74,13 +68,7 @@ class MemberController extends Controller
             $name = time().$file->getClientOriginalName();
             $file->move('assets/images/member',$name);           
             $input['photo'] = $name;
-        }
-        if ($file1 = $request->file('ceo')) 
-         {      
-            $name = time().$file1->getClientOriginalName();
-            $file1->move('assets/images/member',$name);           
-            $input['ceo'] = $name;
-        }  
+        } 
         $data->fill($input)->save();
         //--- Logic Section Ends
 
@@ -102,47 +90,31 @@ class MemberController extends Controller
     {
         //--- Validation Section
         $rules = [
-            'photo'      => 'mimes:jpeg,jpg,png,svg',
-            'ceo'      => 'mimes:jpeg,jpg,png,svg',
-            'company_name'  => 'required'
-        ];
+               'photo'      => 'mimes:jpeg,jpg,png,svg',
+                ];
 
         $validator = Validator::make(Input::all(), $rules);
         
         if ($validator->fails()) {
-            return response()->json(array('errors' => $validator->getMessageBag()->toArray()));
+          return response()->json(array('errors' => $validator->getMessageBag()->toArray()));
         }
         //--- Validation Section Ends
 
         //--- Logic Section
         $data = Member::findOrFail($id);
-        
         $input = $request->all();
-        if ($file = $request->file('photo')) 
-        {              
-            $name = time().$file->getClientOriginalName();
-            $file->move('assets/images/member',$name);
-            if($data->photo != null)
-            {
-                if (file_exists(public_path().'/assets/images/member/'.$data->photo)) {
-                    unlink(public_path().'/assets/images/member/'.$data->photo);
-                }
-            }            
+            if ($file = $request->file('photo')) 
+            {              
+                $name = time().$file->getClientOriginalName();
+                $file->move('assets/images/member',$name);
+                if($data->photo != null)
+                {
+                    if (file_exists(public_path().'/assets/images/member/'.$data->photo)) {
+                        unlink(public_path().'/assets/images/member/'.$data->photo);
+                    }
+                }            
             $input['photo'] = $name;
-        }
-        if ($file1 = $request->file('ceo')) 
-        {              
-            $name = time().$file1->getClientOriginalName();
-            $file1->move('assets/images/member',$name);
-            if($data->ceo != null)
-            {
-                if (file_exists(public_path().'/assets/images/member/'.$data->ceo)) {
-                    unlink(public_path().'/assets/images/member/'.$data->ceo);
-                }
-            }            
-            $input['ceo'] = $name;
-        }
-
+            } 
         $data->update($input);
         //--- Logic Section Ends
 
@@ -156,15 +128,18 @@ class MemberController extends Controller
     public function destroy($id)
     {
         $data = Member::findOrFail($id);
-        
-        if ($data->photo && file_exists(public_path().'/assets/images/member/'.$data->photo)) {
+        //If Photo Doesn't Exist
+        if($data->photo == null){
+            $data->delete();
+            //--- Redirect Section     
+            $msg = 'Data Deleted Successfully.';
+            return response()->json($msg);      
+            //--- Redirect Section Ends     
+        }
+        //If Photo Exist
+        if (file_exists(public_path().'/assets/images/member/'.$data->photo)) {
             unlink(public_path().'/assets/images/member/'.$data->photo);
         }
-
-        if ($data->ceo && file_exists(public_path().'/assets/images/member/'.$data->ceo)) {
-            unlink(public_path().'/assets/images/member/'.$data->ceo);
-        }
-
         $data->delete();
         //--- Redirect Section     
         $msg = 'Data Deleted Successfully.';

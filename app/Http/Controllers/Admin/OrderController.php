@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Datatables;
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\Generalsetting;
@@ -94,7 +94,7 @@ class OrderController extends Controller
                     'body' => $request->message,
             ];
 
-            $mailer = new GeniusMailer();
+            $mailer = new JEWMailer();
             $mailer->sendCustomMail($data);                
         }
         else
@@ -134,7 +134,7 @@ class OrderController extends Controller
                     'body' => "Hello ".$mainorder->customer_name.","."\n Thank you for shopping with us. We are looking forward to your next visit.",
                 ];
 
-                $mailer = new GeniusMailer();
+                $mailer = new JEWMailer();
                 $mailer->sendCustomMail($data);                
             }
             else
@@ -155,7 +155,7 @@ class OrderController extends Controller
                     'subject' => 'Your order '.$mainorder->order_number.' is Declined!',
                     'body' => "Hello ".$mainorder->customer_name.","."\n We are sorry for the inconvenience caused. We are looking forward to your next visit.",
                 ];
-            $mailer = new GeniusMailer();
+            $mailer = new JEWMailer();
             $mailer->sendCustomMail($data);
             }
             else

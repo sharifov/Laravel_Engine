@@ -86,24 +86,6 @@
                           </div>
                         </div>
 
-                        <div class="row">
-                          <div class="col-lg-2">
-                            <div class="left-area">
-                                <h4 class="heading">Banner img *</h4>
-                            </div>
-                          </div>
-                          <div class="col-lg-10">
-                            <div class="img-upload">
-                                <div id="image-preview" class="img-preview" style="background: url({{ $data->photo ? asset('assets/images/sliders/'.$data->photo):asset('assets/images/noimage.png') }});">
-                                    <label for="image-upload" class="img-label" id="image-label"><i class="icofont-upload-alt"></i>Upload Image</label>
-                                    <input type="file" name="photo" class="img-upload" id="image-upload">
-                                  </div>
-                                  <p class="text">Prefered Size: (600x600) or Square Sized Image</p>
-                            </div>
-
-                          </div>
-                        </div>
-
 
                         <div class="row">
                           <div class="col-lg-4">

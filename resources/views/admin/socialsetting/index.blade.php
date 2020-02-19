@@ -42,32 +42,6 @@
                 </div>
 
                 <div class="row">
-                  <label class="control-label col-sm-3" for="youtube">Youtube *</label>
-                  <div class="col-sm-6">
-                    <input class="form-control" name="youtube" id="youtube" placeholder="http://youtube.com/" required="" type="text" value="{{$data->youtube}}">
-                  </div>
-                  <div class="col-sm-3">
-                    <label class="switch">
-                      <input type="checkbox" name="y_status" value="1" {{$data->y_status==1?"checked":""}}>
-                      <span class="slider round"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <label class="control-label col-sm-3" for="instagram">Instagram *</label>
-                  <div class="col-sm-6">
-                    <input class="form-control" name="instagram" id="instagram" placeholder="http://instagram.com/" required="" type="text" value="{{$data->instagram}}">
-                  </div>
-                  <div class="col-sm-3">
-                    <label class="switch">
-                      <input type="checkbox" name="i_status" value="1" {{$data->i_status==1?"checked":""}}>
-                      <span class="slider round"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="row">
                   <label class="control-label col-sm-3" for="gplus">Google Plus *</label>
                   <div class="col-sm-6">
                     <input class="form-control" name="gplus" id="gplus" placeholder="http://google.com/" required="" type="text" value="{{$data->gplus}}">

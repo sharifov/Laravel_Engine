@@ -60,7 +60,7 @@
                               </div>
                               <div class="col-lg-6">
                                   <div class="tawk-area">
-                                    <textarea class="nic-edit"  id="contact_title" name="contact_title"> {{ $data->contact_title }} </textarea>
+                                    <textarea class="nic-edit"  name="contact_title"> {{ $data->contact_title }} </textarea>
                                   </div>
                               </div>
                             </div>
@@ -75,7 +75,7 @@
                               </div>
                               <div class="col-lg-6">
                                   <div class="tawk-area">
-                                    <textarea class="nic-edit" id="contact_text" name="contact_text"> {{ $data->contact_text }} </textarea>
+                                    <textarea class="nic-edit"  name="contact_text"> {{ $data->contact_text }} </textarea>
                                   </div>
                               </div>
                             </div>
@@ -92,7 +92,7 @@
                               </div>
                               <div class="col-lg-6">
                                   <div class="tawk-area">
-                                    <textarea class="nic-edit"  id="side_title" name="side_title"> {{ $data->side_title }} </textarea>
+                                    <textarea class="nic-edit"  name="side_title"> {{ $data->side_title }} </textarea>
                                   </div>
                               </div>
                             </div>
@@ -107,7 +107,7 @@
                               </div>
                               <div class="col-lg-6">
                                   <div class="tawk-area">
-                                    <textarea class="nic-edit" id="side_text" name="side_text"> {{ $data->side_text }} </textarea>
+                                    <textarea class="nic-edit"  name="side_text"> {{ $data->side_text }} </textarea>
                                   </div>
                               </div>
                             </div>

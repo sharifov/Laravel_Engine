@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use App\Models\Generalsetting;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
@@ -75,7 +75,7 @@ class LoginController extends Controller
                   'body' => $msg,
           ];
 
-          $mailer = new GeniusMailer();
+          $mailer = new JEWMailer();
           $mailer->sendCustomMail($data);                
       }
       else

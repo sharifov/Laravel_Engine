@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Datatables;
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use App\Models\EmailTemplate;
 use App\Models\Generalsetting;
 use Illuminate\Http\Request;
@@ -67,7 +67,7 @@ class EmailController extends Controller
                     'body' => $request->body,
                 ];
 
-                $mailer = new GeniusMailer();
+                $mailer = new JEWMailer();
                 $mailer->sendCustomMail($data);            
             }
             else

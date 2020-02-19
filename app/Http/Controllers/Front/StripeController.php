@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Classes\GeniusMailer;
+use App\Classes\JEWMailer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Config;

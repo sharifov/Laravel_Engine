@@ -23,8 +23,7 @@ class LanguageController extends Controller
                             ->addColumn('action', function(Language $data) {
                                 $delete = $data->id == 1 ? '':'<a href="javascript:;" data-href="' . route('admin-lang-delete',$data->id) . '" data-toggle="modal" data-target="#confirm-delete" class="delete"><i class="fas fa-trash-alt"></i></a>';
                                 $default = $data->is_default == 1 ? '<a><i class="fa fa-check"></i> Default</a>' : '<a class="status" data-href="' . route('admin-lang-st',['id1'=>$data->id,'id2'=>1]) . '">Set Default</a>';
-                                $active = '<label class="jew-check switch float-right"><input type="checkbox" data-href="'.route('admin-lang-act',['id1'=>$data->id,'id2'=>(int)!$data->active]).'" name="active" value="'.$data->active.'" '.($data->active?'checked':null).'><span class="slider round"></span></label>';
-                                return '<div class="action-list"><a href="' . route('admin-lang-edit',$data->id) . '"> <i class="fas fa-edit"></i>Edit</a>'.$delete.$default.$active.'</div>';
+                                return '<div class="action-list"><a href="' . route('admin-lang-edit',$data->id) . '"> <i class="fas fa-edit"></i>Edit</a>'.$delete.$default.'</div>';
                             }) 
                             ->rawColumns(['action'])
                             ->toJson(); //--- Returning Json Data To Client Side
@@ -70,12 +69,10 @@ class LanguageController extends Controller
     //*** GET Request
     public function edit($id)
     {
-    	$default_lang = json_decode(file_get_contents(public_path().'/assets/languages/'.(Language::where('is_default', 1)->first()->file)), true);
-
         $data = Language::findOrFail($id);
         $data_results = file_get_contents(public_path().'/assets/languages/'.$data->file);
         $lang = json_decode($data_results);
-        return view('admin.language.edit',compact('data','lang', 'default_lang'));
+        return view('admin.language.edit',compact('data','lang'));
     }
 
     //*** POST Request
@@ -87,7 +84,6 @@ class LanguageController extends Controller
 
         //--- Logic Section
         $input = $request->all();
-
         $data = Language::findOrFail($id);
         if (file_exists(public_path().'/assets/languages/'.$data->file)) {
             unlink(public_path().'/assets/languages/'.$data->file);
@@ -98,7 +94,6 @@ class LanguageController extends Controller
         unset($input['_token']);
         unset($input['language']);
         $mydata = json_encode($input);
-       
         file_put_contents(public_path().'/assets/languages/'.$data->file, $mydata); 
         //--- Logic Section Ends
 
@@ -108,8 +103,8 @@ class LanguageController extends Controller
         //--- Redirect Section Ends            
     }
 
-    public function status($id1,$id2)
-    {
+      public function status($id1,$id2)
+        {
             $data = Language::findOrFail($id1);
             $data->is_default = $id2;
             $data->update();
@@ -118,18 +113,7 @@ class LanguageController extends Controller
             $msg = 'Data Updated Successfully.';
             return response()->json($msg);      
             //--- Redirect Section Ends  
-    }
-
-    public function active($id1,$id2)
-    {
-            $data = Language::findOrFail($id1);
-            $data->active = $id2;
-            $data->update();
-            //--- Redirect Section     
-            $msg = 'Data Updated Successfully.';
-            return response()->json($msg);      
-            //--- Redirect Section Ends  
-    }
+        }
 
     //*** GET Request Delete
     public function destroy($id)

@@ -25,7 +25,6 @@ class PageSettingController extends Controller
     public function update(Request $request)
     {
         $data = Pagesetting::findOrFail(1);
-
         $input = $request->all();
         
             if ($file = $request->file('video_image')) 
